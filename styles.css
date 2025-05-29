@@ -1,0 +1,26 @@
+.nav-custom {
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative;
+}
+
+.nav-custom:hover {
+  color: #ffc107 !important; /* Bootstrap warning color */
+  text-decoration: none;
+}
+
+.nav-custom::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffc107;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-custom:hover::after {
+  width: 60%;
+}
